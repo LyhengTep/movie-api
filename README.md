@@ -37,3 +37,11 @@ After successfully running the project you can access available endpoints like m
 - POST: /api/movie create a movie (title,rating, and cat_id)
 - PUT: /api/movie update a movie (id, title,rating, and cat_id)
 - DELETE: /api/movie/{id} delete a movie by id
+
+**Thank you !!! ;)**
+
+
+In case you want to know about me you can find out more about me at [Check me out](https://lyhengtep.com)
+
+
+**HAPPY CODING**
