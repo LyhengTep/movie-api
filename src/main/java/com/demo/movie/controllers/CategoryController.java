@@ -5,11 +5,9 @@ import com.demo.movie.dtos.MovieDto;
 import com.demo.movie.entities.Category;
 import com.demo.movie.exceptions.BadRequestException;
 import com.demo.movie.svcs.CategorySvc;
+import com.demo.movie.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,18 +15,21 @@ import java.util.List;
  * @author Lyheng
  * @date 20/5/22
  */
+@RestController
 @RequestMapping("/api/category")
 public class CategoryController  {
    @Autowired
    CategorySvc svc;
 
     @PostMapping
-    public Category createMovie(@RequestBody CategoryDto body) throws BadRequestException {
-        return this.svc.create(body.toEntity());
+    public Response<Category> createMovie(@RequestBody CategoryDto body) throws BadRequestException {
+        Category cat = this.svc.create(body.toEntity());
+        return new Response<Category>(true,cat,"Success");
     }
 
     @GetMapping
-    public List<Category> findAll(){
-        return this.svc.findAll();
+    public Response<List<Category>> findAll(){
+        List<Category> listCat= this.svc.findAll();
+        return new Response<List<Category>>(true,listCat,"Success");
     }
 }
