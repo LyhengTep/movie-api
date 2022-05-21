@@ -41,7 +41,7 @@ After successfully running the project you can access available endpoints like m
 **Thank you !!! ;)**
 
 
-In case you want to know about me you can find out more about me at [Check me out](https://.lyhengtep.com)
+In case you want to know about me you can find out more about me at [Check me out](https://lyhengtep.com)
 
 
 **HAPPY CODING**
